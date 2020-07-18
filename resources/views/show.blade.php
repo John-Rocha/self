@@ -8,9 +8,9 @@
         </div>
         <div class="card-body">
             @foreach($teams as $team)
-                <br>Time: {{ $team->getId() }} <br>
+                <br><b>Time:</b> {{ $team->getId() }} <br>
                 @foreach($team->getPlayers() as $player)
-                    {{ $player->getId() }} - XP: {{ $player->getExperience() }}
+                    {{ $player->getId() }} - <b>XP: </b>{{ $player->getExperience() }}
                     <br>
                 @endforeach
             @endforeach
@@ -18,7 +18,7 @@
     </div>
     <form action="{{ route('jogo.index') }}">
         @csrf
-    <button type="submit" class="btn btn-dark">Voltar</button>
+        <button type="submit" class="btn btn-dark">Voltar</button>
     </form>
 </div>
 

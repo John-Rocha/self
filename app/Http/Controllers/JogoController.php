@@ -43,7 +43,7 @@ class JogoController extends Controller
         $balancer = new TeamBalancerMinMax();
 
         foreach($request->except('_token') as $id => $experience) {
-            $balancer->addPlayer(new Player(++$id, $experience));
+            $balancer->addPlayer(new Player($id, $experience));
         }
 
         $teams = $balancer->balance();
