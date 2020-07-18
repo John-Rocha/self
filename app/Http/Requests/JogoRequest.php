@@ -24,10 +24,7 @@ class JogoRequest extends FormRequest
     public function rules()
     {
         return [
-            'player1' => 'required|numeric',
-            'player2' => 'required|numeric',
-            'player3' => 'required|numeric',
-            'player4' => 'required|numeric',
+
         ];
     }
 }
